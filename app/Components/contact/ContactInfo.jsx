@@ -8,15 +8,15 @@ const ContactInfo = () => {
       icon: FaPhone,
       title: "Phone Support",
       description: "Speak directly with our team",
-      details: "+44 (0) 161 123 4567",
-      timing: "Mon-Fri: 8:00 AM - 6:00 PM",
+      details: "+966 507 314 206",
+      timing: "Sun-Thu: 8:00 AM - 6:00 PM",
       color: "from-blue-500 to-blue-600"
     },
     {
       icon: FaEnvelope,
       title: "Email Us",
       description: "Send us your queries",
-      details: "info@rbsconstruction.co.uk",
+      details: "islaaaza@gmail.com",
       timing: "Response within 24 hours",
       color: "from-green-500 to-green-600"
     },
@@ -24,8 +24,8 @@ const ContactInfo = () => {
       icon: FaMapMarkerAlt,
       title: "Visit Our Office",
       description: "Come meet us in person",
-      details: "Unit 10 Beckford Street, Manchester, England M40 5AE",
-      timing: "Mon-Fri: 9:00 AM - 5:00 PM",
+      details: "Riyadh - Al-Wadi District, Postal Code 13313, Kingdom of Saudi Arabia",
+      timing: "Sun-Thu: 9:00 AM - 5:00 PM",
       color: "from-purple-500 to-purple-600"
     },
   ];
@@ -35,10 +35,7 @@ const ContactInfo = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   };
 
@@ -47,40 +44,31 @@ const ContactInfo = () => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: {
-        duration: 0.5
-      }
+      transition: { duration: 0.5 }
     },
     hover: {
       y: -8,
       scale: 1.02,
-      transition: {
-        duration: 0.3,
-        ease: "easeInOut"
-      }
+      transition: { duration: 0.3, ease: "easeInOut" }
     }
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="bg-white rounded-2xl shadow-lg border border-gray-200 p-4 sm:p-6 lg:p-8 w-full"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
     >
-      <motion.h3 
-        className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 flex items-center gap-3"
-      >
+      <motion.h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 flex items-center gap-3">
         <div className="p-2 bg-[#001C73] text-white rounded-lg">
           <FaClock className="w-4 h-4 sm:w-5 sm:h-5" />
         </div>
         Contact Information
       </motion.h3>
-      
-      <motion.p 
-        className="text-gray-600 mb-6 lg:mb-8 text-sm sm:text-base lg:text-lg"
-      >
+
+      <motion.p className="text-gray-600 mb-6 lg:mb-8 text-sm sm:text-base lg:text-lg">
         Multiple ways to get in touch with our team. We're here to help you with your construction needs.
       </motion.p>
 
@@ -99,13 +87,13 @@ const ContactInfo = () => {
               transition={{ delay: index * 0.1 }}
             >
               <div className="flex items-start gap-3 sm:gap-4">
-                <motion.div 
+                <motion.div
                   className={`p-2 sm:p-3 rounded-xl bg-gradient-to-r ${contact.color} text-white shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}
                   whileHover={{ rotate: 5 }}
                 >
                   <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
                 </motion.div>
-                
+
                 <div className="flex-1 min-w-0">
                   <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 group-hover:text-[#001C73] transition-colors duration-300 truncate">
                     {contact.title}
@@ -121,8 +109,8 @@ const ContactInfo = () => {
                     <span className="break-words">{contact.timing}</span>
                   </div>
                 </div>
-                
-                <motion.div 
+
+                <motion.div
                   className="opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0"
                   whileHover={{ x: 5 }}
                 >
@@ -136,8 +124,7 @@ const ContactInfo = () => {
         })}
       </div>
 
-      {/* Quick Stats */}
-      <motion.div 
+      <motion.div
         className="mt-6 lg:mt-8 pt-6 lg:pt-8 border-t border-gray-200"
         initial="hidden"
         whileInView="visible"

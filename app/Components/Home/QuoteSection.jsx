@@ -45,10 +45,8 @@ function RequestQuote() {
 
       const result = await response.json();
       
-      // Show success popup
       setShowSuccessPopup(true);
       
-      // Reset form
       setFormData({
         name: '',
         telephone: '',
@@ -71,7 +69,6 @@ function RequestQuote() {
     setShowSuccessPopup(false);
   };
 
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -271,7 +268,6 @@ function RequestQuote() {
   return (
     <>
       <section id="request-quote-section" className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
-        {/* Background Image with Gradient Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
             src={backgrounImage}
@@ -282,7 +278,6 @@ function RequestQuote() {
           <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/90 to-white/80" />
         </div>
 
-        {/* Enhanced Decorative Elements */}
         <motion.div 
           className="absolute top-20 left-10 w-32 h-32 bg-[#001C73]/15 rounded-full blur-3xl"
           animate={glowAnimation}
@@ -302,7 +297,6 @@ function RequestQuote() {
           }}
         />
 
-        {/* Floating Particles */}
         <motion.div 
           className="absolute top-1/4 left-1/4 w-4 h-4 bg-[#001C73]/30 rounded-full"
           animate={{
@@ -355,7 +349,6 @@ function RequestQuote() {
           viewport={{ once: true, margin: "-50px" }}
         >
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-16 lg:gap-20 items-center">
-            {/* Text Content */}
             <motion.div 
               className="text-center lg:text-left"
               variants={slideInLeftVariants}
@@ -443,7 +436,6 @@ function RequestQuote() {
                 ))}
               </motion.div>
 
-              {/* Contact Info */}
               <motion.div 
                 className="mt-12 p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-[#001C73]/20 shadow-lg"
                 variants={slideUpVariants}
@@ -476,7 +468,7 @@ function RequestQuote() {
                     whileHover={{ x: 5 }}
                   >
                     <FaPhone className="text-[#001C73] text-lg" />
-                    <p>+1 (555) 123-4567</p>
+                    <p>+966 507 314 206</p>
                   </motion.div>
                   <motion.div 
                     className="flex items-center gap-3"
@@ -484,7 +476,7 @@ function RequestQuote() {
                     whileHover={{ x: 5 }}
                   >
                     <FaEnvelope className="text-[#001C73] text-lg" />
-                    <p>info@rbsconstruction.com</p>
+                    <p>islaaaza@gmail.com</p>
                   </motion.div>
                   <motion.div 
                     className="flex items-center gap-3"
@@ -492,13 +484,12 @@ function RequestQuote() {
                     whileHover={{ x: 5 }}
                   >
                     <FaMapMarkerAlt className="text-[#001C73] text-lg" />
-                    <p>Unit 10 Beckford Street, Manchester, England, M40 5AE</p>
+                    <p>Riyadh - Al-Wadi District, Postal Code 13313, Kingdom of Saudi Arabia</p>
                   </motion.div>
                 </motion.div>
               </motion.div>
             </motion.div>
 
-            {/* Contact Form */}
             <motion.div 
               className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-2xl border border-[#001C73]/10"
               variants={slideInRightVariants}
@@ -525,7 +516,6 @@ function RequestQuote() {
                   Request Your Proposal
                 </motion.h3>
 
-                {/* Name Field */}
                 <motion.div 
                   className="relative"
                   variants={formElementVariants}
@@ -545,7 +535,6 @@ function RequestQuote() {
                   />
                 </motion.div>
 
-                {/* Telephone Field */}
                 <motion.div 
                   className="relative"
                   variants={formElementVariants}
@@ -565,7 +554,6 @@ function RequestQuote() {
                   />
                 </motion.div>
 
-                {/* Email Field */}
                 <motion.div 
                   className="relative"
                   variants={formElementVariants}
@@ -585,7 +573,6 @@ function RequestQuote() {
                   />
                 </motion.div>
 
-                {/* Project Type Field */}
                 <motion.div 
                   className="relative"
                   variants={formElementVariants}
@@ -609,7 +596,6 @@ function RequestQuote() {
                   </select>
                 </motion.div>
 
-                {/* Budget Field */}
                 <motion.div 
                   className="relative"
                   variants={formElementVariants}
@@ -624,15 +610,14 @@ function RequestQuote() {
                     onChange={handleChange}
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none transition-all duration-300 bg-white/80 text-gray-900 focus:border-[#001C73] focus:ring-4 focus:ring-[#001C73]/20"
                   >
-                    <option value="under-10k">Under $10,000</option>
-                    <option value="10k-50k">$10,000 - $50,000</option>
-                    <option value="50k-100k">$50,000 - $100,000</option>
-                    <option value="100k-500k">$100,000 - $500,000</option>
-                    <option value="500k-plus">$500,000+</option>
+                    <option value="under-10k">Under SAR 10,000</option>
+                    <option value="10k-50k">SAR 10,000 - 50,000</option>
+                    <option value="50k-100k">SAR 50,000 - 100,000</option>
+                    <option value="100k-500k">SAR 100,000 - 500,000</option>
+                    <option value="500k-plus">SAR 500,000+</option>
                   </select>
                 </motion.div>
 
-                {/* Timeline Field */}
                 <motion.div 
                   className="relative"
                   variants={formElementVariants}
@@ -655,7 +640,6 @@ function RequestQuote() {
                   </select>
                 </motion.div>
 
-                {/* Message Field */}
                 <motion.div 
                   className="relative"
                   variants={formElementVariants}
@@ -675,7 +659,6 @@ function RequestQuote() {
                   />
                 </motion.div>
 
-                {/* Submit Button */}
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
@@ -710,13 +693,11 @@ function RequestQuote() {
                     className="absolute inset-0 bg-gradient-to-r from-[#0026A3] to-[#001C73] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"
                   />
                   
-                  {/* Button Shine Effect */}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
                   />
                 </motion.button>
 
-                {/* Privacy Note */}
                 <motion.p 
                   className="text-center text-gray-500 text-sm mt-4"
                   variants={textRevealVariants}
@@ -729,7 +710,6 @@ function RequestQuote() {
         </motion.div>
       </section>
 
-      {/* Success Popup */}
       {showSuccessPopup && (
         <motion.div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"

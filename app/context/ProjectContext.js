@@ -1,5 +1,6 @@
 "use client"
-import { createContext, useContext, useReducer, useEffect } from 'react';
+import { createContext, useContext, useReducer, useEffect, useCallback } from 'react';
+import { api } from '@/Api/api';
 
 const ProjectContext = createContext();
 
@@ -28,46 +29,43 @@ const projectReducer = (state, action) => {
 export const ProjectProvider = ({ children }) => {
   const [state, dispatch] = useReducer(projectReducer, initialState);
 
-  const fetchProjects = async (category = 'all') => {
+  const fetchProjects = useCallback(async (category = 'all') => {
     dispatch({ type: 'FETCH_START' });
     try {
-      const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-      const url = category === 'all' 
-        ? `${baseUrl}/projects`
-        : `${baseUrl}/projects?category=${category}`;
+      const endpoint = category === 'all' 
+        ? '/projects'
+        : `/projects?category=${encodeURIComponent(category)}`;
       
-      const response = await fetch(url);
-      if (!response.ok) throw new Error('Failed to fetch projects');
+      const data = await api.get(endpoint);
+      const rawProjects = data?.data?.projects || data?.projects || [];
       
-      const data = await response.json();
-      
-      // Transform the data to match frontend structure
-      const allProjects = data.data.projects.map(project => ({
-        id: project._id,
+      const allProjects = rawProjects.map(project => ({
+        id: project._id || project.id,
         title: project.title,
         category: project.category,
         description: project.description,
         shortDescription: project.shortDescription,
         image: project.images?.[0]?.url || '/Projects/default.jpg',
-        images: project.images?.map(img => img.url) || [],
+        images: project.images?.map(img => (typeof img === 'string' ? img : img.url)) || [],
         duration: project.duration,
         size: project.size,
         location: project.location,
         client: project.client,
-        completionDate: new Date(project.completionDate).toLocaleDateString(),
+        completionDate: project.completionDate ? new Date(project.completionDate).toLocaleDateString() : '',
         technologies: project.technologies || [],
         features: project.features || [],
         status: project.status,
         featured: project.featured
       }));
 
-      // Group by category - FIXED: Use consistent category naming
       const formattedProjects = {
         all: allProjects,
         ...allProjects.reduce((acc, project) => {
-          const category = project.category;
-          if (!acc[category]) acc[category] = [];
-          acc[category].push(project);
+          const cat = project.category;
+          if (cat) {
+            if (!acc[cat]) acc[cat] = [];
+            acc[cat].push(project);
+          }
           return acc;
         }, {})
       };
@@ -76,25 +74,22 @@ export const ProjectProvider = ({ children }) => {
     } catch (error) {
       dispatch({ type: 'FETCH_ERROR', payload: error.message });
     }
-  };
+  }, []);
 
-  const fetchCategories = async () => {
+  const fetchCategories = useCallback(async () => {
     try {
-      const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-      const response = await fetch(`${baseUrl}/projects/categories`);
-      if (!response.ok) throw new Error('Failed to fetch categories');
-      
-      const data = await response.json();
-      dispatch({ type: 'FETCH_CATEGORIES_SUCCESS', payload: data.data.categories });
+      const data = await api.get('/projects/categories');
+      const categories = data?.data?.categories || data?.categories || [];
+      dispatch({ type: 'FETCH_CATEGORIES_SUCCESS', payload: categories });
     } catch (error) {
       console.error('Error fetching categories:', error);
     }
-  };
+  }, []);
 
   useEffect(() => {
     fetchProjects();
     fetchCategories();
-  }, []);
+  }, [fetchProjects, fetchCategories]);
 
   return (
     <ProjectContext.Provider value={{

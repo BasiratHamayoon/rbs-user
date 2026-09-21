@@ -94,7 +94,7 @@ const Navbar = () => {
                 className='flex items-center group cursor-pointer'
                 onClick={() => handleLinkClick('/')}
               >
-                <div className="relative w-32 h-12 sm:w-40 sm:h-14 transition-all duration-300 group-hover:scale-105">
+                <div className="relative w-32 h-12 sm:w-40 sm:h-14">
                   <Image
                     src="/logos/blue.png"
                     alt="RBS Construction Logo"
@@ -102,6 +102,7 @@ const Navbar = () => {
                     sizes="(max-width: 768px) 120px, 160px"
                     className="object-contain object-left"
                     priority
+                    loading="eager"
                   />
                 </div>
               </Link>

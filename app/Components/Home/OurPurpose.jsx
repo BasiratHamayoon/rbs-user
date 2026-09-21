@@ -11,7 +11,7 @@ import Loader from '../Loader';
 function OurPurpose() {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.3,
+    threshold: 0.15,
   });
 
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -50,48 +50,28 @@ function OurPurpose() {
     setIsPageLoading(true);
     setTimeout(() => {
       router.push('/Pages/whyUs');
-    }, 1000); // 1 second delay to show loader
+    }, 1000);
   };
 
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.4,
-        duration: 1
+        staggerChildren: 0.2,
+        duration: 0.8
       }
     }
   };
 
-  const leftContentVariants = {
+  const slideUpVariants = {
     hidden: { 
       opacity: 0, 
-      x: -100,
-      scale: 0.9
+      y: 40
     },
     visible: {
       opacity: 1,
-      x: 0,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const rightContentVariants = {
-    hidden: { 
-      opacity: 0, 
-      x: 100,
-      scale: 0.9
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      scale: 1,
+      y: 0,
       transition: {
         duration: 0.8,
         ease: "easeOut"
@@ -102,23 +82,16 @@ function OurPurpose() {
   const thumbnailVariants = {
     hidden: { 
       opacity: 0, 
-      scale: 0.8,
-      rotateY: -10
+      scale: 0.95,
+      y: 30
     },
     visible: {
       opacity: 1,
       scale: 1,
-      rotateY: 0,
+      y: 0,
       transition: {
-        duration: 1,
+        duration: 0.8,
         ease: "easeOut"
-      }
-    },
-    hover: {
-      scale: 1.05,
-      boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.4)",
-      transition: {
-        duration: 0.4
       }
     }
   };
@@ -132,8 +105,8 @@ function OurPurpose() {
       scale: 1,
       opacity: 1,
       transition: {
-        delay: 0.6,
-        duration: 0.6,
+        delay: 0.4,
+        duration: 0.5,
         type: "spring",
         stiffness: 200
       }
@@ -143,21 +116,14 @@ function OurPurpose() {
   const textLinkVariants = {
     hidden: { 
       opacity: 0, 
-      x: -30
+      y: 20
     },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
-        delay: 0.8,
-        duration: 0.6
-      }
-    },
-    hover: {
-      x: 10,
-      color: "#001C73",
-      transition: {
-        duration: 0.3
+        delay: 0.5,
+        duration: 0.5
       }
     }
   };
@@ -197,52 +163,48 @@ function OurPurpose() {
       
       <section 
         ref={ref}
-        className='text-black grid lg:grid-cols-2 grid-cols-1 lg:px-40 px-8 py-20 gap-12 lg:gap-20 justify-center items-start bg-gray-50 min-h-[80vh]'
+        className='text-black overflow-hidden grid lg:grid-cols-2 grid-cols-1 lg:px-40 px-6 py-20 gap-12 lg:gap-20 justify-center items-start bg-gray-50 min-h-[80vh]'
       >
-        {/* Left Content - Video Thumbnail */}
         <motion.div 
-          className='flex flex-col items-center lg:items-start h-full justify-between'
+          className='flex flex-col items-center lg:items-start h-full justify-between w-full max-w-full'
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
         >
-          <div className='w-full'>
+          <div className='w-full max-w-full overflow-hidden'>
             <motion.div
               className='relative cursor-pointer'
               variants={thumbnailVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              whileHover="hover"
               onClick={handleVideoOpen}
             >
               <Image 
                 src={videoThumbnail} 
                 alt="Video Thumbnail"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className='w-full max-w-lg rounded-2xl shadow-xl transition-all duration-500'
+                priority
               />
               
-              {/* Always Visible Play Button (No Hover Required) */}
               <motion.div 
                 className="absolute inset-0 bg-black/20 rounded-2xl flex items-center justify-center"
                 variants={playButtonVariants}
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
               >
-                <motion.div
-                  className="bg-white/95 w-20 h-20 rounded-full flex items-center justify-center shadow-2xl border-4 border-[#001C73]/30"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.3 }}
+                <div
+                  className="bg-white/95 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-2xl border-4 border-[#001C73]/30"
                 >
-                  <FaPlay className="text-[#001C73] text-2xl ml-1" />
-                </motion.div>
+                  <FaPlay className="text-[#001C73] text-xl sm:text-2xl ml-1" />
+                </div>
               </motion.div>
             </motion.div>
           </div>
 
-          {/* Watch Our Video Text - Now at bottom */}
           <motion.div
-            className="flex items-center gap-3 w-full justify-center lg:justify-start"
-            variants={leftContentVariants}
+            className="flex items-center gap-3 w-full justify-center lg:justify-start pt-6"
+            variants={slideUpVariants}
           >
             <motion.div
               className="w-2 h-2 bg-[#001C73] rounded-full"
@@ -256,19 +218,15 @@ function OurPurpose() {
                 ease: "easeInOut"
               }}
             />
-            <motion.p 
-              className='text-gray-700 text-lg font-semibold flex items-center gap-2'
-              variants={leftContentVariants}
-            >
+            <p className='text-gray-700 text-lg font-semibold flex items-center gap-2'>
               <FaPlay className="text-[#001C73] text-sm" />
               Watch our Video
-            </motion.p>
+            </p>
           </motion.div>
         </motion.div>
 
-        {/* Right Content - Text */}
         <motion.div 
-          className='flex flex-col h-full justify-between space-y-8'
+          className='flex flex-col h-full justify-between space-y-8 w-full max-w-full'
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
@@ -276,77 +234,55 @@ function OurPurpose() {
           <div className='space-y-8'>
             <motion.div 
               className='space-y-6'
-              variants={rightContentVariants}
+              variants={slideUpVariants}
             >
-              <motion.h1 
-                className='text-2xl font-bold text-[#001C73] leading-tight tracking-wide uppercase'
-                variants={rightContentVariants}
-              >
+              <h1 className='text-2xl font-bold text-[#001C73] leading-tight tracking-wide uppercase'>
                 Why us?
-              </motion.h1>
+              </h1>
               
-              <motion.h2 
-                className='text-3xl md:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight'
-                variants={rightContentVariants}
-              >
+              <h2 className='text-3xl md:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight'>
                 Our purpose is to improve people's lives through building the facilities and infrastructure that communities need
-              </motion.h2>
+              </h2>
             </motion.div>
 
-            {/* Read More Text Link */}
             <motion.div
               onClick={handleReadMore}
               variants={textLinkVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              whileHover="hover"
               className="inline-flex items-center gap-3 text-gray-700 font-semibold text-lg cursor-pointer group relative pb-1"
             >
               <span>Read more</span>
-              <motion.span
-                animate={{ x: 0 }}
-                whileHover={{ x: 8 }}
-                transition={{ duration: 0.3 }}
-              >
+              <span>
                 <FaAngleRight className="w-5 h-5" />
-              </motion.span>
-              <motion.div
+              </span>
+              <div
                 className="h-0.5 bg-[#001C73] absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"
               />
             </motion.div>
           </div>
 
-          {/* Stats Section - Now at bottom */}
           <motion.div 
-            className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 pt-8"
+            className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 pt-8 w-full max-w-full"
             variants={containerVariants}
           >
             {[
               { number: '500+', label: 'Projects Completed' },
               { number: '25+', label: 'Years Experience' },
               { number: '98%', label: 'Client Satisfaction' }
-            ].map((stat, index) => (
-              <motion.div
+            ].map((stat) => (
+              <div
                 key={stat.label}
                 className="text-center p-4 rounded-xl bg-white shadow-lg border border-gray-100"
-                variants={rightContentVariants}
-                custom={index}
-                whileHover={{ 
-                  scale: 1.05, 
-                  y: -5,
-                  boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)"
-                }}
-                transition={{ duration: 0.3 }}
               >
                 <div className="text-2xl font-bold text-[#001C73]">{stat.number}</div>
                 <div className="text-gray-600 text-sm font-medium mt-1">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </motion.div>
         </motion.div>
       </section>
 
-      {/* Video Modal */}
       <AnimatePresence>
         {isVideoOpen && (
           <motion.div
@@ -363,7 +299,6 @@ function OurPurpose() {
               animate="visible"
               exit="exit"
             >
-              {/* Close Button */}
               <motion.button
                 onClick={handleVideoClose}
                 className="absolute top-4 right-4 z-10 bg-white/20 hover:bg-white/30 text-white w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-sm transition-all duration-300"
@@ -373,7 +308,6 @@ function OurPurpose() {
                 <FaTimes className="text-xl" />
               </motion.button>
 
-              {/* Video Container */}
               <div className="relative aspect-video w-full">
                 {isVideoLoading && (
                   <motion.div 
@@ -381,20 +315,14 @@ function OurPurpose() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                   >
-                    <motion.div
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                    <div
+                      className="animate-spin"
                     >
                       <FaSpinner className="text-white text-4xl" />
-                    </motion.div>
-                    <motion.p 
-                      className="absolute bottom-10 text-white text-lg font-semibold"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.5 }}
-                    >
+                    </div>
+                    <p className="absolute bottom-10 text-white text-lg font-semibold">
                       Loading video...
-                    </motion.p>
+                    </p>
                   </motion.div>
                 )}
 

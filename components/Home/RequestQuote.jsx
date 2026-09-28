@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { Phone, Mail, MapPin, Check, Send, X } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
-import api from '@/lib/api';
+import api from '../../lib/api';
 
 function RequestQuote() {
   const t = useTranslations('quote');

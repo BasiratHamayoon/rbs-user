@@ -1,21 +1,51 @@
 "use client";
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Instagram, Facebook, MessageCircle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+
+// Clean inline social SVGs (100% reliable, no missing module exports)
+const InstagramIcon = ({ className = "w-6 h-6 lg:w-8 lg:h-8" }) => (
+  <svg className={className} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
+
+const FacebookIcon = ({ className = "w-6 h-6 lg:w-8 lg:h-8" }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+  </svg>
+);
+
+const WhatsAppIcon = ({ className = "w-6 h-6 lg:w-8 lg:h-8" }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12.031 0C5.406 0 .031 5.375.031 12c0 2.125.563 4.188 1.625 6L.031 24l6.188-1.594c1.75 1 3.781 1.594 5.813 1.594 6.625 0 12-5.375 12-12s-5.375-12-12-12zm6.969 16.969c-.281.781-1.438 1.469-2.344 1.656-.625.125-1.438.25-4.156-.875-3.469-1.438-5.719-5-5.906-5.25-.156-.219-1.406-1.875-1.406-3.563s.875-2.531 1.219-2.875c.344-.344.75-.438 1-.438s.5 0 .719.031c.25.031.563-.094.875.656.344.781 1.156 2.813 1.25 3.031.125.219.188.469.063.75-.125.281-.219.438-.438.688-.219.25-.469.563-.656.75-.219.219-.469.469-.219.906.281.438 1.219 2.031 2.656 3.281 1.844 1.625 3.375 2.156 3.844 2.375.469.219.75.188 1.031-.125.281-.344 1.219-1.438 1.563-1.938.313-.469.656-.406 1.094-.25.438.156 2.813 1.344 3.281 1.594.5.219.813.344.938.563.125.219.125 1.25-.156 2.031z" />
+  </svg>
+);
 
 function SubscriptionSection() {
   const t = useTranslations('subscription');
 
   const socialLinks = [
-    { icon: <Instagram className="text-2xl lg:text-3xl w-6 h-6 lg:w-8 lg:h-8" />, href: "https://instagram.com", label: "Instagram" },
-    { icon: <Facebook className="text-2xl lg:text-3xl w-6 h-6 lg:w-8 lg:h-8" />, href: "https://facebook.com", label: "Facebook" },
-    { icon: <MessageCircle className="text-2xl lg:text-3xl w-6 h-6 lg:w-8 lg:h-8" />, href: "https://wa.me/966507314206", label: "WhatsApp" },
+    { icon: <InstagramIcon />, href: "https://instagram.com", label: "Instagram" },
+    { icon: <FacebookIcon />, href: "https://facebook.com", label: "Facebook" },
+    { icon: <WhatsAppIcon />, href: "https://wa.me/966507314206", label: "WhatsApp" },
   ];
 
   const cards = [
-    { type: t('residential'), title: t('residentialTitle'), image: '/Home/img1.jpg', description: t('residentialDesc') },
-    { type: t('commercial'), title: t('commercialTitle'), image: '/Home/img2.jpg', description: t('commercialDesc') },
+    { 
+      type: t('residential'), 
+      title: t('residentialTitle'), 
+      image: '/Home/img1.jpg', 
+      description: t('residentialDesc') 
+    },
+    { 
+      type: t('commercial'), 
+      title: t('commercialTitle'), 
+      image: '/Home/img2.jpg', 
+      description: t('commercialDesc') 
+    },
   ];
 
   const scrollToQuote = () => {

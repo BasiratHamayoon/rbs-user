@@ -1,0 +1,466 @@
+{
+  "brand": {
+    "name": "Vision Roweiyat",
+    "fullName": "Vision Roweiyat Almakkatul Arabiya Saudia",
+    "short": "VR",
+    "tagline": "Building Dreams With Precision"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "whyUs": "Why Us",
+    "projects": "Projects",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "title1": "Building Your Dreams",
+    "title2": "With Precision",
+    "subtitle": "We transform visions into reality with innovative construction solutions, unmatched expertise, and commitment to excellence in every project.",
+    "exploreProjects": "Explore Our Projects",
+    "contactUs": "Contact Us"
+  },
+  "about": {
+    "sectionTitle": "Constructions & Renovations",
+    "constructions": "Constructions",
+    "renovations": "& Renovations",
+    "description": "We are a construction company based in Riyadh, we undertake all aspects of construction on domestic buildings from designing to completion. We provide professional renovation and installation services with a real focus on customer satisfaction.",
+    "moreDetails": "More Details",
+    "years": "25+ Years",
+    "yearsExperience": "Years Experience",
+    "heroTitle": "Building Excellence",
+    "heroSubtitle": "Transforming visions into iconic structures with innovation and quality craftsmanship",
+    "premiumQuality": "Premium Quality",
+    "innovativeDesign": "Innovative Design",
+    "aboutUs": "About Vision Roweiyat",
+    "heritage": "Vision Roweiyat Portfolio",
+    "philosophies": "Our Philosophy",
+    "guidingPrinciples": "Our Guiding Principles",
+    "guidingSubtitle": "Building the future with purpose, passion, and precision",
+    "valuesHeading": "We are a people-orientated, progressive business, driven by our values to deliver lasting change for our stakeholders and the communities we work in.",
+    "valuesText": "We are passionate about our role in providing vital buildings and infrastructure across the country, committed to the idea that what we do makes a real difference to people's lives. Our purpose, vision and values shape our culture, proactively guiding our day-to-day activities and keeping us focused on what's important to us.",
+    "teamHeader": "Our Team",
+    "teamTitle": "Meet Our Experts",
+    "teamSubtitle": "Our dedicated team of construction professionals brings decades of expertise and innovation to every project",
+    "roleRecipient": "CORE TEAM MEMBER",
+    "awardHeader": "Award Winning Excellence",
+    "awardTitle": "Our Achievements",
+    "awardSubtitle": "Celebrating excellence and recognition in construction innovation, safety, and client satisfaction",
+    "awardRecipient": "AWARD RECIPIENT",
+    "mission": {
+      "tag": "mission",
+      "title": "Our Mission",
+      "description": "To deliver exceptional construction solutions that exceed client expectations through innovative design, superior craftsmanship, and unwavering commitment to quality and safety."
+    },
+    "vision": {
+      "tag": "vision",
+      "title": "Our Vision",
+      "description": "To be the most trusted construction partner, transforming skylines and communities through sustainable practices while maintaining the highest standards of excellence."
+    },
+    "values": {
+      "tag": "values",
+      "title": "Our Values",
+      "description": "Integrity, innovation, and excellence form the foundation of everything we do. We believe in building not just structures, but lasting relationships and sustainable communities."
+    },
+    "approach": {
+      "tag": "approach",
+      "title": "Our Approach",
+      "description": "Combining traditional craftsmanship with modern technology to create spaces that are both beautiful and functional, while ensuring timely delivery and budget adherence."
+    },
+    "commitment": {
+      "tag": "commitment",
+      "title": "Our Commitment",
+      "description": "Dedicated to sustainable construction practices that minimize environmental impact while maximizing efficiency and creating spaces that stand the test of time."
+    },
+    "team": {
+      "sarah": {
+        "name": "Sarah Johnson",
+        "position": "Chief Executive Officer",
+        "description": "20+ years of experience in construction management and business development. Leading Vision Roweiyat with vision and strategic direction."
+      },
+      "michael": {
+        "name": "Michael Chen",
+        "position": "Head of Construction",
+        "description": "Expert in project management and sustainable building practices. Oversees all construction operations with precision."
+      },
+      "emily": {
+        "name": "Emily Rodriguez",
+        "position": "Lead Architect",
+        "description": "Award-winning architect with focus on innovative and sustainable designs. Creates spaces that inspire and endure."
+      },
+      "david": {
+        "name": "David Thompson",
+        "position": "Senior Project Manager",
+        "description": "Specialized in large-scale commercial and residential projects. Ensures timely delivery and quality excellence."
+      },
+      "lisa": {
+        "name": "Lisa Wang",
+        "position": "Design Director",
+        "description": "Creative visionary with expertise in modern architectural trends. Blends aesthetics with functionality seamlessly."
+      },
+      "robert": {
+        "name": "Robert Martinez",
+        "position": "Operations Director",
+        "description": "Ensuring seamless operations and client satisfaction across all projects. Masters of logistics and coordination."
+      }
+    },
+    "achievements": {
+      "construction": {
+        "title": "Excellence in Construction",
+        "category": "Construction Excellence",
+        "description": "Awarded for exceptional construction quality and innovative project delivery in commercial infrastructure."
+      },
+      "safety": {
+        "title": "Safety Innovation Award",
+        "category": "Safety & Compliance",
+        "description": "Recognized for implementing cutting-edge safety protocols and maintaining zero incident records."
+      },
+      "sustainable": {
+        "title": "Sustainable Design",
+        "category": "Sustainability",
+        "description": "Honored for leadership in sustainable construction practices and eco-friendly building solutions."
+      },
+      "client": {
+        "title": "Client Choice Award",
+        "category": "Client Satisfaction",
+        "description": "Voted by clients for outstanding service delivery and exceptional project management."
+      },
+      "architecture": {
+        "title": "Innovation in Architecture",
+        "category": "Design Innovation",
+        "description": "Celebrated for revolutionary architectural designs that redefine urban landscapes."
+      },
+      "community": {
+        "title": "Community Impact Award",
+        "category": "Community Service",
+        "description": "Recognized for significant contributions to community development and social infrastructure."
+      }
+    }
+  },
+  "services": {
+    "title": "Our",
+    "titleAccent": "Services",
+    "learnMore": "Learn more",
+    "moreDetails": "More Details",
+    "extensions": {
+      "title": "EXTENSIONS",
+      "description": "Professional home extensions and additions to expand your living space with quality craftsmanship and modern design.",
+      "specialization": "Expert design and construction for seamless home expansions tailored to your needs."
+    },
+    "plastering": {
+      "title": "PLASTERING",
+      "description": "Premium plastering services for smooth, durable walls and ceilings with expert finish.",
+      "specialization": "Traditional and modern plastering techniques for perfect finishes on any surface."
+    },
+    "tiling": {
+      "title": "TILING",
+      "description": "Expert tile installation for bathrooms, kitchens, and floors with precision and elegance.",
+      "specialization": "Wide range of tile options and professional installation services for lasting quality."
+    },
+    "painting": {
+      "title": "PAINTING & DECORATING",
+      "description": "Professional painting and decorating services for interior and exterior spaces with premium finishes.",
+      "specialization": "Premium paints and expert application techniques for lasting beauty and protection."
+    },
+    "fencing": {
+      "title": "FENCING",
+      "description": "Durable and stylish fencing solutions for privacy, security, and aesthetic appeal.",
+      "specialization": "Custom fencing designs to complement your property with security and elegance."
+    },
+    "groundworks": {
+      "title": "GROUND WORKS",
+      "description": "Professional ground preparation and excavation services for all construction projects.",
+      "specialization": "Foundation work and site preparation with heavy machinery and expert planning."
+    },
+    "kitchens": {
+      "title": "KITCHENS",
+      "description": "Custom kitchen design and installation for modern homes with premium materials.",
+      "specialization": "Modern and traditional kitchen designs with quality fittings and appliances."
+    },
+    "bathrooms": {
+      "title": "BATHROOMS",
+      "description": "Luxury bathroom design and renovation services with premium fixtures and finishes.",
+      "specialization": "Complete bathroom solutions from design to installation with attention to detail."
+    }
+  },
+  "gallery": {
+    "title": "Featured Projects",
+    "featured": "Featured",
+    "projects": "Projects",
+    "subtitle": "Explore our handpicked selection of exceptional construction projects showcasing innovative designs and quality craftsmanship.",
+    "viewMore": "View More Projects",
+    "discoverMore": "Discover More Amazing Projects",
+    "discoverSubtitle": "Explore our complete portfolio featuring residential complexes, commercial towers, and innovative infrastructure projects.",
+    "loading": "Loading Featured Projects...",
+    "noProjects": "No Projects Available",
+    "noProjectsSub": "We're working on adding amazing projects. Check back soon!",
+    "duration": "Duration",
+    "size": "Size",
+    "close": "Close"
+  },
+  "stats": {
+    "projectsCompleted": "Projects Completed",
+    "yearsExperience": "Years Experience",
+    "clientSatisfaction": "Client Satisfaction"
+  },
+  "whyUs": {
+    "title": "Why Us?",
+    "heading": "Our purpose is to improve people's lives through building the facilities and infrastructure that communities need",
+    "readMore": "Read more",
+    "watchVideo": "Watch our Video",
+    "heroLabel": "Why Choose Us",
+    "heroTitle1": "Why",
+    "heroTitle2": "Vision Roweiyat",
+    "heroSubtitle": "Building excellence and trust through decades of construction expertise",
+    "experienceBadge": "25+ Years Experience",
+    "projectsBadge": "500+ Projects",
+    "satisfactionBadge": "99% Satisfaction",
+    "chooseTitle": "Why Choose Vision Roweiyat?",
+    "excellenceTitle": "Years of Excellence",
+    "excellenceDesc": "Quarter-century of delivering exceptional construction projects with unwavering quality standards.",
+    "successTitle": "Successful Projects",
+    "successDesc": "Diverse portfolio spanning residential, commercial, and infrastructure projects.",
+    "satisfactionTitle": "Client Satisfaction",
+    "satisfactionDesc": "Unmatched commitment to client satisfaction with proven track record of excellence.",
+    "learnProcess": "Learn More About Our Process",
+    "safetyRating": "Safety Rating",
+    "missionTitle1": "Our",
+    "missionTitle2": "Mission & Values",
+    "missionQuote": "\"To build not just structures, but lasting relationships. To deliver not just projects, but promises. To create not just spaces, but experiences that inspire and endure.\"",
+    "qualityFirst": "Quality First",
+    "qualityFirstDesc": "Uncompromising commitment to quality in every aspect of our work.",
+    "innovationDriven": "Innovation Driven",
+    "innovationDrivenDesc": "Embracing new technologies and methods to deliver better results.",
+    "founderTitle": "Our Founder's Vision",
+    "founderSubtitle": "Building excellence and trust through decades of construction expertise",
+    "founderQuote": "\"At Vision Roweiyat, we believe that every building tells a story. For over 25 years, we've been crafting stories of excellence and innovation. Our commitment to quality isn't just about bricks; it's about building relationships that stand the test of time. We combine traditional craftsmanship with modern technology to deliver projects that exceed expectations while maintaining the personal touch that has been our hallmark since day one, ensuring that every structure we build not only meets but exceeds the highest standards of quality.\"",
+    "partnershipsTitle": "Strategic Partnerships",
+    "partnershipsSubtitle": "We work closely with strategic partners to focus on issues that are important to our business and our people. Our collaborative approach ensures that we deliver comprehensive solutions that benefit all stakeholders.",
+    "communityDev": "Community Development Initiatives",
+    "sustainableConst": "Sustainable Construction Practices",
+    "techPartners": "Industry-leading Technology Partners",
+    "trustedBadge": "Trusted Partners",
+    "viewOurProjects": "View Our Projects",
+    "startPartnership": "Start Partnership"
+  },
+  "purpose": {
+    "whyUs": "Why us?",
+    "heading": "Our purpose is to improve people's lives through building the facilities and infrastructure that communities need",
+    "readMore": "Read more",
+    "watchVideo": "Watch our Video",
+    "loadingVideo": "Loading video...",
+    "projectsCompleted": "Projects Completed",
+    "yearsExperience": "Years Experience",
+    "clientSatisfaction": "Client Satisfaction"
+  },
+  "safety": {
+    "title": "SITE SAFETY",
+    "subtitle": "Building with",
+    "subtitleAccent": "Safety",
+    "subtitleEnd": "as our Foundation",
+    "brandName": "At Vision Roweiyat,",
+    "description": "We prioritize the health and safety of all individuals involved in the construction process. From employers to employees, subcontractors to vendors, every person on-site is integral to the successful and safe completion of each project.",
+    "description2": "Our team adheres to the highest local and international safety standards to minimize risks and ensure an accident-free environment. We believe that a secure workplace fosters peak productivity, quality craftsmanship, and mutual trust with our clients.",
+    "badge": "100% SAFE",
+    "f1Title": "Rigorous Safety Protocols",
+    "f1Desc": "Daily hazard assessments, mandatory safety briefings, and strict PPE enforcement across all active job sites.",
+    "f2Title": "Certified Audits & Inspections",
+    "f2Desc": "Routine compliance inspections and regular safety training conducted by certified occupational safety officers.",
+    "f3Title": "Zero-Incident Commitment",
+    "f3Desc": "A proactive culture ensuring that every workforce member returns home safely at the end of every single day."
+  },
+  "quote": {
+    "title": "Request A Quote",
+    "subtitle": "Let's transform your vision into reality with our expert construction services. Share your project details and we'll provide a comprehensive proposal.",
+    "formTitle": "Request Your Proposal",
+    "fullName": "Full Name",
+    "telephone": "Telephone",
+    "email": "Email Address",
+    "projectType": "Project Type",
+    "budget": "Estimated Budget",
+    "timeline": "Project Timeline",
+    "projectDetails": "Project Details",
+    "submit": "SUBMIT REQUEST",
+    "submitting": "SUBMITTING...",
+    "success": "Quote Request Sent!",
+    "successMessage": "Thank you! We've received your quote request and will contact you within 24 hours to discuss your project.",
+    "close": "Close",
+    "features": {
+      "consultation": "Professional consultation and detailed proposal",
+      "management": "Expert project management and planning",
+      "quality": "Premium quality workmanship guarantee",
+      "delivery": "On-time project delivery commitment"
+    },
+    "contactInfo": "Contact Information",
+    "privacy": "We value your privacy and will keep your information confidential.",
+    "residential": "Residential",
+    "commercial": "Commercial",
+    "renovation": "Renovation",
+    "newConstruction": "New Construction",
+    "other": "Other",
+    "immediately": "Immediately",
+    "flexible": "Flexible"
+  },
+  "subscription": {
+    "title": "Get Your Quote",
+    "subtitle": "Connect with us and explore our comprehensive construction solutions",
+    "weProvide": "We Provide",
+    "residential": "Residential",
+    "commercial": "Commercial",
+    "residentialTitle": "Residential Construction",
+    "residentialDesc": "Residential construction projects such as the building of Houses, flats, bungalow, cottage, and other residential facilities.",
+    "commercialTitle": "Commercial Construction",
+    "commercialDesc": "Commercial construction projects such as the building of Offices, industrial facilities and other business establishments.",
+    "solutions": "Solutions & Services",
+    "requestQuote": "REQUEST A QUOTE"
+  },
+  "testimonials": {
+    "title": "TESTIMONIALS",
+    "subtitle": "Don't just take our word for it",
+    "topLabel": "See What Our Client Say",
+    "line1": "We are working hard to exceed expectations and deliver excellence.",
+    "line2": "Discover the experiences of those who trust us with their construction",
+    "line3": "projects."
+  },
+  "projects": {
+    "heroLabel": "Our Portfolio",
+    "heroTitle1": "Our",
+    "heroTitle2": "Projects",
+    "heroSubtitle": "Discover",
+    "heroSubtitleAccent": "exceptional construction projects",
+    "heroSubtitleEnd": "showcasing innovation and quality craftsmanship",
+    "premiumQuality": "Premium Quality",
+    "innovativeDesign": "Innovative Design",
+    "timelyDelivery": "Timely Delivery",
+    "qualityHeading": "Five-star quality, as our standard. Take a look at some of our recent projects.",
+    "qualityText1": "We're passionate about the work we do, and when we achieve results like this, it's no wonder we are genuinely proud of our reputation!",
+    "qualityText2": "Whether you're seeking ideas and inspiration or simply want reassurance that you've found the right building company, feel free to browse through our portfolio of client projects.",
+    "getInTouch": "Get In Touch",
+    "qualityIndicators": {
+      "premium": {
+        "title": "Premium Quality",
+        "description": "Uncompromising standards in every project"
+      },
+      "expert": {
+        "title": "Expert Craftsmanship",
+        "description": "Skilled professionals with years of experience"
+      },
+      "satisfaction": {
+        "title": "Client Satisfaction",
+        "description": "Proven track record of happy customers"
+      }
+    },
+    "all": "All Projects",
+    "loading": "Loading Projects...",
+    "noFound": "No Projects Found",
+    "noFoundSub": "We're working on adding more projects. Check back soon!",
+    "viewDetails": "View Details",
+    "duration": "Duration",
+    "size": "Size",
+    "location": "Location",
+    "client": "Client",
+    "completionDate": "Completion Date",
+    "technologies": "Technologies",
+    "features": "Key Features",
+    "status": "Status",
+    "backToProjects": "Back to Projects",
+    "projectDetails": "Project Details",
+    "projectOverview": "Project Overview",
+    "projectInfo": "Project Information",
+    "gallery": "Gallery",
+    "overview": "Overview",
+    "details": "Details",
+    "noImages": "No images available",
+    "noImagesSub": "Check back later for project images",
+    "loadingImage": "Loading Image...",
+    "of": "of",
+    "shareProject": "Share Project",
+    "contactAbout": "Contact About This Project"
+  },
+  "contact": {
+    "label": "Get In Touch",
+    "title1": "Contact",
+    "title2": "Our Team",
+    "subtitle": "Ready to start your next construction project? Get in touch with our expert team for consultations, quotes, and professional guidance.",
+    "infoTitle": "Contact Information",
+    "infoSubtitle": "Multiple ways to get in touch with our team. We're here to help you with your construction needs.",
+    "phoneSupport": "Phone Support",
+    "phoneSupportDesc": "Speak directly with our team",
+    "phoneDetails": "+966 507 314 206",
+    "phoneTiming": "Sun-Thu: 8:00 AM - 6:00 PM",
+    "emailUs": "Email Us",
+    "emailUsDesc": "Send us your queries",
+    "emailDetails": "islaaaza@gmail.com",
+    "emailTiming": "Response within 24 hours",
+    "visitUs": "Visit Our Office",
+    "visitUsDesc": "Come meet us in person",
+    "visitDetails": "Riyadh - Al-Wadi District, 13313, Kingdom of Saudi Arabia",
+    "visitTiming": "Sun-Thu: 9:00 AM - 5:00 PM",
+    "emergencyLabel": "24/7",
+    "emergencyDesc": "Emergency Support",
+    "responseTimeLabel": "30min",
+    "responseTimeDesc": "Avg Response Time",
+    "enquiriesLabel": "General Enquiries",
+    "enquiriesSubtitle": "Please fill out the form below if you have any enquiries regarding our business",
+    "name": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "email": "Email Address",
+    "emailPlaceholder": "your.email@example.com",
+    "enquiryType": "Enquiry Type",
+    "enquiryTypePlaceholder": "Select Enquiry Type",
+    "generalInquiry": "General Inquiry",
+    "projectConsultation": "Project Consultation",
+    "partnership": "Partnership Opportunity",
+    "career": "Career Opportunities",
+    "media": "Media Inquiry",
+    "support": "Technical Support",
+    "other": "Other",
+    "phone": "Phone Number",
+    "phonePlaceholder": "Phone number",
+    "message": "Your Message",
+    "messagePlaceholder": "Please describe your enquiry in detail...",
+    "responsePreference": "How would you like us to respond?",
+    "respondEmail": "Email",
+    "respondPhone": "Phone",
+    "respondWrite": "Write",
+    "respondNone": "Do Not Contact",
+    "termsText": "I agree that by submitting this form, I accept your website terms of use, privacy notice and cookie policy.",
+    "sending": "Sending...",
+    "send": "Send Message",
+    "success": "Enquiry Sent Successfully!",
+    "successMessage": "Thank you for your enquiry! We've received your message and will get back to you within 24 hours. Our team is looking forward to assisting you.",
+    "close": "Close",
+    "moreInfoLabel": "More Information",
+    "sections": {
+      "fca": {
+        "title": "FCA warning to shareholders",
+        "content": "We have been made aware of a number of entities falsely claiming to be, or to be affiliated with, our company. These entities are using our name and branding without authorization to solicit investments. Please be cautious and verify any communication through our official channels."
+      },
+      "scam": {
+        "title": "Recruitment scam",
+        "content": "We have become aware of fraudulent job offers and recruitment scams falsely claiming to be from our company. Please note that all legitimate job opportunities will be posted on our official careers page and we will never ask for payment during the recruitment process."
+      },
+      "fraud": {
+        "title": "Fraudulent email orders",
+        "content": "There have been reports of fraudulent emails claiming to be from our company requesting orders or payments. Please verify all purchase orders and invoices through our official contact channels. We will never request payment to personal accounts or through unverified channels."
+      }
+    }
+  },
+  "awards": {
+    "title": "Our Achievements",
+    "subtitle": "Celebrating excellence in construction innovation, safety, and client satisfaction"
+  },
+  "footer": {
+    "description": "Building dreams with precision across the Kingdom of Saudi Arabia.",
+    "quickLinks": "Quick Links",
+    "contactTitle": "Contact",
+    "businessInfo": "Business Info",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "common": {
+    "language": "Language",
+    "english": "English",
+    "arabic": "Arabic"
+  }
+}

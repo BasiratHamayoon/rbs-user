@@ -35,7 +35,7 @@ const PartnershipSection = () => {
             >
               <div className="relative w-full max-w-lg">
                 <img
-                  src="/Whyus/t.jpg"
+                  src="/Whyus/t.jpeg"
                   alt="Strategic Partnerships"
                   className="w-full h-[500px] object-cover rounded-2xl shadow-xl"
                 />

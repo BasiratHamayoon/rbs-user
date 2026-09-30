@@ -77,7 +77,7 @@ const ImageTextSection = () => {
             >
               <div className="relative w-full max-w-lg">
                 <img
-                  src="/Whyus/whyChoose.jpg"
+                  src="/Whyus/whyChoose.jpeg"
                   alt="Vision Roweiyat Construction Site"
                   className="w-full h-[500px] object-cover rounded-2xl shadow-xl"
                 />

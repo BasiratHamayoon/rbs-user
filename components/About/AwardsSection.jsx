@@ -11,12 +11,12 @@ const AwardsSection = () => {
   const scrollRef = useRef(null);
 
   const awards = [
-    { id: 'construction', image: '/About/1.jpg', icon: Trophy },
+    { id: 'construction', image: '/About/1.jpeg', icon: Trophy },
     { id: 'safety', image: '/About/2.jpg', icon: Award },
     { id: 'sustainable', image: '/About/3.jpg', icon: Landmark },
-    { id: 'client', image: '/About/4.jpg', icon: Star },
-    { id: 'architecture', image: '/About/5.jpg', icon: Trophy },
-    { id: 'community', image: '/About/1.jpg', icon: Medal }
+    { id: 'client', image: '/About/4.jpeg', icon: Star },
+    { id: 'architecture', image: '/About/5.jpeg', icon: Trophy },
+    { id: 'community', image: '/About/1.jpeg', icon: Medal }
   ];
 
   const scroll = (direction) => {

@@ -23,7 +23,7 @@ function OwnerSection() {
         <div className='w-full relative'>
           <div className="w-full max-w-lg mx-auto">
             <Image 
-              src="/Whyus/owner.jpg" 
+              src="/Whyus/owner.jpeg" 
               alt="Vision Roweiyat Founder"
               width={400}
               height={700}

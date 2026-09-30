@@ -37,13 +37,13 @@ function SubscriptionSection() {
     { 
       type: t('residential'), 
       title: t('residentialTitle'), 
-      image: '/Home/img1.jpg', 
+      image: '/Home/img1.jpeg', 
       description: t('residentialDesc') 
     },
     { 
       type: t('commercial'), 
       title: t('commercialTitle'), 
-      image: '/Home/img2.jpg', 
+      image: '/Home/img2.jpeg', 
       description: t('commercialDesc') 
     },
   ];

@@ -5,8 +5,8 @@ import { useTranslations } from 'next-intl';
 import { ChevronLeft, ChevronRight, User, Award, Flame, Lightbulb } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-// Reliable inline LinkedIn SVG icon
-const LinkedInIcon = ({ className = "w-3.5 h-3.5" }) => (
+// Clean, reliable inline LinkedIn SVG icon
+const LinkedInIcon = ({ className = "w-4 h-4" }) => (
   <svg 
     className={className} 
     fill="currentColor" 
@@ -22,12 +22,12 @@ const TeamSection = () => {
   const scrollRef = useRef(null);
 
   const teamMembers = [
-    { id: 'sarah', image: '/About/01.jpg', icon: Flame, badges: ["Leadership", "Strategy"] },
-    { id: 'michael', image: '/About/02.jpg', icon: Award, badges: ["Management", "Operations"] },
-    { id: 'emily', image: '/About/03.jpg', icon: Lightbulb, badges: ["Architecture", "Design"] },
-    { id: 'david', image: '/About/04.jpg', icon: User, badges: ["Commercial", "Quality"] },
-    { id: 'lisa', image: '/About/05.jpg', icon: Award, badges: ["Creative", "Modern"] },
-    { id: 'robert', image: '/About/01.jpg', icon: User, badges: ["Operations", "Logistics"] }
+    { id: 'salman', image: '/About/01.jpeg', icon: Flame, badges: ["Leadership", "Strategy"] },
+    { id: 'omar', image: '/About/02.jpeg', icon: Award, badges: ["Management", "Operations"] },
+    { id: 'faisal', image: '/About/03.jpeg', icon: Lightbulb, badges: ["Architecture", "Design"] },
+    { id: 'tariq', image: '/About/04.jpeg', icon: User, badges: ["Commercial", "Quality"] },
+    { id: 'abdullah', image: '/About/05.jpeg', icon: Award, badges: ["Creative", "Modern"] },
+    { id: 'abdulrahman', image: '/About/01.jpeg', icon: User, badges: ["Operations", "Logistics"] }
   ];
 
   const scroll = (direction) => {
@@ -91,21 +91,22 @@ const TeamSection = () => {
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.id}
-                className="flex-none w-80 snap-center"
+                className="flex-none w-80 snap-center pb-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
               >
-                <div className={`bg-white rounded-2xl border-2 transition-all duration-300 flex flex-col h-[460px] overflow-hidden ${
+                <div className={`bg-white rounded-2xl border-2 transition-all duration-300 flex flex-col h-[500px] overflow-hidden ${
                   index === activeCard ? 'border-blue-500 shadow-xl' : 'border-slate-100 shadow-md'
                 }`}>
-                  <div className="relative h-64 overflow-hidden flex-shrink-0">
+                  {/* Portrait Container - Face Priority Top Crop */}
+                  <div className="relative h-64 overflow-hidden flex-shrink-0 bg-slate-100">
                     <Image
                       src={member.image}
                       alt=""
                       fill
-                      className="object-cover"
+                      className="object-cover object-top"
                       priority
                     />
                     <div className="absolute bottom-4 left-4 bg-blue-700 text-white text-xs px-3 py-1.5 rounded-lg font-bold shadow-md">
@@ -113,33 +114,37 @@ const TeamSection = () => {
                     </div>
                   </div>
 
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold text-slate-800 mb-2">
-                      {t(`team.${member.id}.name`)}
-                    </h3>
-                    
-                    <div className="flex flex-wrap gap-1.5 mb-4">
-                      {member.badges.map((badge, bIdx) => (
-                        <span key={bIdx} className="text-[10px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full uppercase">
-                          {badge}
-                        </span>
-                      ))}
+                  {/* Info Block */}
+                  <div className="p-6 flex flex-col justify-between flex-grow">
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-800 mb-2">
+                        {t(`team.${member.id}.name`)}
+                      </h3>
+                      
+                      <div className="flex flex-wrap gap-1.5 mb-3">
+                        {member.badges.map((badge, bIdx) => (
+                          <span key={bIdx} className="text-[10px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full uppercase">
+                            {badge}
+                          </span>
+                        ))}
+                      </div>
+
+                      <p className="text-slate-600 text-xs leading-relaxed line-clamp-3">
+                        {t(`team.${member.id}.description`)}
+                      </p>
                     </div>
 
-                    <p className="text-slate-600 text-xs leading-relaxed mb-4 line-clamp-3">
-                      {t(`team.${member.id}.description`)}
-                    </p>
-
-                    <div className="flex items-center justify-between pt-3 border-t border-slate-100 flex-shrink-0">
+                    {/* Bottom Icons & Info */}
+                    <div className="flex items-center justify-between pt-3 border-t border-slate-100 mt-2 flex-shrink-0">
                       <span className="text-[10px] text-slate-400 font-semibold uppercase">
                         {t('roleRecipient')}
                       </span>
                       <div className="flex gap-2">
-                        <a href="#" className="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-blue-700 hover:text-white transition-colors">
-                          <LinkedInIcon className="w-3.5 h-3.5" />
+                        <a href="#" className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-blue-700 hover:text-white transition-colors">
+                          <LinkedInIcon className="w-4 h-4" />
                         </a>
-                        <div className="w-7 h-7 rounded-full bg-blue-50 flex items-center justify-center">
-                          <member.icon className="w-3.5 h-3.5 text-blue-700" />
+                        <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center">
+                          <member.icon className="w-4 h-4 text-blue-700" />
                         </div>
                       </div>
                     </div>

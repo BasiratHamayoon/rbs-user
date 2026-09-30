@@ -47,7 +47,7 @@ function OurPurpose() {
             onClick={handleVideoOpen}
           >
             <Image
-              src="/Home/thumbnail.jpg"
+              src="/Home/thumbnail.jpeg"
               alt="Video Thumbnail"
               width={600}
               height={400}

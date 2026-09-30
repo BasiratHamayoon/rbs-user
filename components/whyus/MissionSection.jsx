@@ -17,7 +17,7 @@ const MissionSection = () => {
     <section ref={ref} className="relative py-20 bg-slate-900 text-white overflow-hidden w-full">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/Whyus/mbg.jpg')" }}
+        style={{ backgroundImage: "url('/Whyus/mbg.jpeg')" }}
       >
         <div className="absolute inset-0 bg-white/90" />
         <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-white/50 to-white/70" />

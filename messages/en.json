@@ -72,35 +72,35 @@
       "description": "Dedicated to sustainable construction practices that minimize environmental impact while maximizing efficiency and creating spaces that stand the test of time."
     },
     "team": {
-      "sarah": {
-        "name": "Sarah Johnson",
+      "salman": {
+        "name": "Eng. Salman Al-Ghamdi",
         "position": "Chief Executive Officer",
-        "description": "20+ years of experience in construction management and business development. Leading Vision Roweiyat with vision and strategic direction."
+        "description": "20+ years of experience in construction management and strategic business development. Leading Vision Roweiyat with innovation and vision."
       },
-      "michael": {
-        "name": "Michael Chen",
+      "omar": {
+        "name": "Eng. Omar Al-Harbi",
         "position": "Head of Construction",
-        "description": "Expert in project management and sustainable building practices. Oversees all construction operations with precision."
+        "description": "Expert in project execution and sustainable building practices. Oversees all major construction operations with precision."
       },
-      "emily": {
-        "name": "Emily Rodriguez",
+      "faisal": {
+        "name": "Arch. Faisal Al-Otaibi",
         "position": "Lead Architect",
-        "description": "Award-winning architect with focus on innovative and sustainable designs. Creates spaces that inspire and endure."
+        "description": "Award-winning architect with a focus on cutting-edge and sustainable designs that inspire and stand the test of time."
       },
-      "david": {
-        "name": "David Thompson",
+      "tariq": {
+        "name": "Eng. Tariq Al-Qahtani",
         "position": "Senior Project Manager",
-        "description": "Specialized in large-scale commercial and residential projects. Ensures timely delivery and quality excellence."
+        "description": "Specialized in large-scale commercial and residential towers. Ensures timely delivery and uncompromising quality."
       },
-      "lisa": {
-        "name": "Lisa Wang",
+      "abdullah": {
+        "name": "Arch. Abdullah Al-Sudairy",
         "position": "Design Director",
-        "description": "Creative visionary with expertise in modern architectural trends. Blends aesthetics with functionality seamlessly."
+        "description": "Creative visionary with expertise in modern Salmanian and contemporary trends. Blends aesthetics with functional engineering."
       },
-      "robert": {
-        "name": "Robert Martinez",
+      "abdulrahman": {
+        "name": "Eng. Abdulrahman Al-Dosari",
         "position": "Operations Director",
-        "description": "Ensuring seamless operations and client satisfaction across all projects. Masters of logistics and coordination."
+        "description": "Ensuring seamless site operations, logistics, and client satisfaction across all Kingdom-wide infrastructure projects."
       }
     },
     "achievements": {

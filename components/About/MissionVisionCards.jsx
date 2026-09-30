@@ -11,11 +11,11 @@ const MissionCards = () => {
   const scrollRef = useRef(null);
 
   const cards = [
-    { type: 'mission', image: '/About/1.jpg' },
+    { type: 'mission', image: '/About/1.jpeg' },
     { type: 'vision', image: '/About/2.jpg' },
     { type: 'values', image: '/About/3.jpg' },
-    { type: 'approach', image: '/About/4.jpg' },
-    { type: 'commitment', image: '/About/5.jpg' }
+    { type: 'approach', image: '/About/4.jpeg' },
+    { type: 'commitment', image: '/About/5.jpeg' }
   ];
 
   const scroll = (direction) => {

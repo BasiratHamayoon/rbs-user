@@ -63,7 +63,7 @@ function AboutSection() {
         >
           <div className="relative overflow-hidden rounded-2xl shadow-xl w-full max-w-md sm:max-w-lg lg:max-w-xl hover:shadow-2xl transition-shadow duration-300">
             <Image
-              src="/Home/image.jpg"
+              src="/Home/image.jpeg"
               alt="Construction Project"
               className="w-full h-[350px] sm:h-[400px] lg:h-[450px] object-cover rounded-2xl"
               width={600}

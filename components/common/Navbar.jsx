@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-1 px-4 hidden md:block">
           <div className="max-w-7xl mx-auto flex justify-center gap-10 items-center h-8 text-xs font-medium">
             <span>islaaaza@gmail.com</span>
-            <span>+966 507 314 206</span>
+            <span dir="ltr">+966 507 314 206</span>
             <span>Riyadh, Saudi Arabia</span>
           </div>
         </div>
